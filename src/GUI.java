@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUI {
     private JTabbedPane TabbedPannel;
@@ -24,6 +26,25 @@ public class GUI {
 
         frame.setSize(600,500);
 
+        btnStart.addActionListener(new ActionListener() {
+            long startTime;
+            long endTime;
+            public void actionPerformed(ActionEvent e) {
+                if (btnStart.getText().equals("Start")){
+                    btnStart.setText("Stop");
+                    startTime = System.currentTimeMillis();
+                    System.out.println("Start Time: " + startTime);
+                }
+                else{
+                    btnStart.setText("Start");
+                    endTime = System.currentTimeMillis();
+                    System.out.println("End Time: " + endTime);
+                    System.out.println("Change in time: " + (endTime - startTime));
+                }
+
+
+            }
+        });
     }
 
 }
