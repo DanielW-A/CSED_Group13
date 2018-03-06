@@ -41,9 +41,10 @@
                 </constraints>
                 <properties>
                   <model>
+                    <item value="Productive"/>
+                    <item value="Social Media"/>
                     <item value="Entertainment"/>
-                    <item value="Work"/>
-                    <item value="..."/>
+                    <item value="Other"/>
                   </model>
                 </properties>
               </component>
